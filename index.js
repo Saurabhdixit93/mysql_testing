@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
 
 const dotenv = require("dotenv").config();
 sequelize
-  .sync()
+  .authenticate()
   .then(() => {
     console.log("DB Connected");
     app.listen(PORT, () => {
